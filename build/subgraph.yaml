@@ -1,15 +1,15 @@
 specVersion: 0.0.2
 description: EIP-721
-repository: https://github.com/wighawag/eip721-subgraph
+repository: https://github.com/tranchien2002/eip721-bsc
 schema:
   file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: EIP721
-    network: mainnet
+    network: chapel
     source:
       abi: EIP721
-      startBlock: 5806610
+      startBlock: 8446869
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -22,8 +22,8 @@ dataSources:
         - All
       abis:
         - name: EIP721
-          file: EIP721\abis\All.json
+          file: EIP721/abis/All.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-      file: EIP721\EIP721.wasm
+      file: EIP721/EIP721.wasm

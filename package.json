@@ -33,7 +33,8 @@
     "setup": "npm-run-all -l externals:down --parallel shell:externals local:setup",
     "dev": "npm-run-all -l externals:down --parallel externals local:setup:deploy",
     "shell:dev": "npm-run-all -l externals:down --parallel shell:externals local:setup:deploy",
-    "run:local": "cross-env BUIDLER_NETWORK=localhost node"
+    "run:local": "cross-env BUIDLER_NETWORK=localhost node",
+    "deploy": "graph deploy --debug --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ tranchien2002/eip721-testnet-bsc"
   },
   "devDependencies": {
     "@graphprotocol/graph-ts": "^0.18.1",
